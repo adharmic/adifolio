@@ -16,7 +16,7 @@ export default function Project ({
   return (
     <div className='w-full flex flex-col gap-2'>
       <div className='w-full text-2xl'>{name}</div>
-      <img src={img} className='h-64 w-fit rounded-lg' />
+      <img src={img} className='h-64 w-fit rounded-lg w-max-fit object-fit' />
       <div className='w-full'>{description}</div>
       <a href={live} className='button'>
         Live Site
