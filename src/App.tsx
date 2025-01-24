@@ -12,12 +12,12 @@ export default function App () {
         <Separator />
         <Experience />
         <Separator />
-        <div className='flex flex-row gap-16'>
+        {/* <div className='flex flex-row gap-16'>
           <div className='w-[200px]'>
             <div className='w-full text-2xl'>Projects</div>
           </div>
           <div className='w-full'></div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

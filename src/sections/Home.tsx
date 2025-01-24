@@ -1,6 +1,6 @@
 export default function Home () {
   return (
-    <div className='flex flex-row gap-16'>
+    <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
       <div className='w-[200px]'>
         <img
           className='w-full aspect-square rounded-full border-4 border-[#ffffe3]'
