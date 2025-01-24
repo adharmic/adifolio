@@ -14,7 +14,9 @@ export default function Projects () {
           source='https://github.com/adharmic/adiOS'
           img='/adios.png'
         />
-        <Separator />
+        <div className='self-start w-1/2 md:w-full'>
+          <Separator />
+        </div>
         <Project
           name="Hell's Fury"
           img='/hells_fury.png'
