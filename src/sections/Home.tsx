@@ -1,9 +1,9 @@
 export default function Home () {
   return (
     <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
-      <div className='w-[200px]'>
+      <div className='w-full md:w-[200px]'>
         <img
-          className='w-full aspect-square rounded-full border-4 border-[#ffffe3]'
+          className='md:w-full w-32 aspect-square rounded-full border-4 border-[#ffffe3]'
           src='/headshot.jpg'
         />
       </div>

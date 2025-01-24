@@ -3,9 +3,11 @@ import Work from '../components/Work'
 
 export default function Experience () {
   return (
-    <div className='flex flex-col md:flex-row gap-16'>
-      <div className='w-[200px]'>
-        <div className='w-full text-2xl'>Work Experience</div>
+    <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
+      <div className='w-full md:w-[200px]'>
+        <div className='w-full text-2xl text-center md:text-start font-[400]'>
+          Work Experience
+        </div>
       </div>
       <div className='flex flex-col gap-8 w-full'>
         <Work
