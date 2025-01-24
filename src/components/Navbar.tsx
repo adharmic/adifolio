@@ -5,8 +5,8 @@ export default function Navbar () {
       <div className='md:flex flex-row gap-4 hidden'>
         <a href='#'>home</a>
         <a href='#experience'>experience</a>
-        <h1>projects</h1>
-        <h1>contact</h1>
+        <a href='#projects'>projects</a>
+        <a href='#contact'>contact</a>
       </div>
     </div>
   )

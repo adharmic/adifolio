@@ -4,7 +4,7 @@ import Separator from '../components/Separator'
 
 export default function Projects () {
   return (
-    <div className='flex flex-col md:flex-row gap-4 md:gap-16'>
+    <div id='projects' className='flex flex-col md:flex-row gap-4 md:gap-16'>
       <Header>Projects</Header>
       <div className='flex flex-col gap-8 w-full'>
         <Project
