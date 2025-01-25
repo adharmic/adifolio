@@ -12,18 +12,26 @@ export default function Projects () {
           description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima. Aperiam, illo aut! Reiciendis cupiditate pariatur est nesciunt. Est, facilis!'
           live='https://adi-os.vercel.app'
           source='https://github.com/adharmic/adiOS'
-          img='/adios.png'
-        />
+        >
+          <img className='h-64 rounded-lg' src='/adios.png' />
+        </Project>
         <div className='self-start w-1/2 md:w-full'>
           <Separator />
         </div>
         <Project
           name="Hell's Fury"
-          img='/hells_fury.png'
           live='https://hells-fury.firebaseapp.com/'
           source='https://github.com/Ed-joe/Hells-Fury/tree/master/Source%20Game'
           description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima. Aperiam, illo aut! Reiciendis cupiditate pariatur est nesciunt. Est, facilis!'
-        />
+        >
+          <iframe
+            className='rounded-lg h-64'
+            src='https://www.youtube-nocookie.com/embed/C4GsruPaAgs?si=AX7yPOctR7697_vS'
+            title='YouTube video player'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          ></iframe>
+          <img className='h-64 rounded-lg' src='/hells_fury.png' />
+        </Project>
       </div>
     </div>
   )
