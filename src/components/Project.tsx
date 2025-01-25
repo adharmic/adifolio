@@ -1,3 +1,5 @@
+import Button from './Button'
+
 interface ProjectProps {
   name: string
   source: string
@@ -18,12 +20,12 @@ export default function Project ({
       <div className='w-full text-2xl'>{name}</div>
       <img src={img} className='w-fit h-64 rounded-lg  ' />
       <div className='w-full'>{description}</div>
-      <a href={live} className='button'>
-        Live Site
-      </a>
-      <a href={source} className='button'>
-        Source Code
-      </a>
+      <Button>
+        <a href={live}>Live Site</a>
+      </Button>
+      <Button>
+        <a href={source}>Source Code</a>
+      </Button>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import Button from '../components/Button'
 import Header from '../components/Header'
 
 export default function Contact () {
@@ -17,7 +18,7 @@ export default function Contact () {
           <div className='text-xl'>Message</div>
           <textarea className='w-full rounded-lg border-1 p-2 border-[#ffffe3]'></textarea>
         </div>
-        <div className='button self-end hover:cursor-pointer'>Submit</div>
+        <Button>Submit</Button>
       </div>
     </div>
   )
