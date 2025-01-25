@@ -9,7 +9,7 @@ export default function Projects () {
       <div className='flex flex-col gap-8 w-full'>
         <Project
           name='adiOS'
-          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima. Aperiam, illo aut! Reiciendis cupiditate pariatur est nesciunt. Est, facilis!'
+          description='A mock operating system inspired by Windows XP and written using React and Typescript.'
           live='https://adi-os.vercel.app'
           source='https://github.com/adharmic/adiOS'
         >
@@ -22,7 +22,7 @@ export default function Projects () {
           name="Hell's Fury"
           live='https://hells-fury.firebaseapp.com/'
           source='https://github.com/Ed-joe/Hells-Fury/tree/master/Source%20Game'
-          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, minima. Aperiam, illo aut! Reiciendis cupiditate pariatur est nesciunt. Est, facilis!'
+          description='A feature-complete, dungeon-crawling web game written entirely in Typescript with custom art and musical assets. Second place winner of the 2021 Stony Brook University Game Programming Competition.'
         >
           <iframe
             className='rounded-lg h-64'
