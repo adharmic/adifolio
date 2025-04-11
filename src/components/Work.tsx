@@ -3,9 +3,11 @@ interface WorkProps {
   position: string
   years: string
   description: string
+  logo: string
 }
 
-export default function Work ({
+export default function Work({
+  logo,
   company,
   position,
   years,
@@ -13,8 +15,11 @@ export default function Work ({
 }: WorkProps) {
   return (
     <div className='w-full flex flex-col gap-2'>
-      <div className='w-full text-2xl'>{company}</div>
-      <div className='w-full text-xl'>{position}</div>
+      <div className="p-2 rounded-full bg-[#ffffe3] w-20 aspect-square">
+        <img src={logo} className="w-20 aspect-square object-contain bg-[#ffffe3]" />
+      </div>
+      <div className='w-full text-2xl font-[400]'>{company}</div>
+      <div className='w-full text-xl font-[300]'>{position}</div>
       <div className='w-full text-lg'>{years}</div>
       <div className='w-full'>{description}</div>
     </div>
