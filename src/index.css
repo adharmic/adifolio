@@ -53,6 +53,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-header-alt {
+  background: linear-gradient(to right, #77dbf4, #008eab);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-button {
   background: -webkit-linear-gradient(#feaf3c, #db662d);
 }

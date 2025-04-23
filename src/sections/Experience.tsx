@@ -5,7 +5,7 @@ import Work from '../components/Work'
 export default function Experience() {
   return (
     <div id='experience' className='flex flex-col md:flex-row gap-4 md:gap-16'>
-      <Header>Work Experience</Header>
+      <Header>Experience</Header>
       <div className='flex flex-col gap-8 w-full'>
         <Work
           logo='/kantime.svg'

@@ -41,7 +41,7 @@ export default function Home() {
       </div>
       <div className='flex flex-col gap-2 w-full'>
         <h1 className='text-3xl font-[400] gradient-header'>Adithya Ajith</h1>
-        <p className='font-[300] text-xl gradient-header'>Full Stack Software Engineer</p>
+        <p className='font-[300] text-xl gradient-header-alt'>Full Stack Software Engineer</p>
         <Button icon={<AiOutlineDownload />}>
           <a href='/adithya_ajith_resume.pdf'>Résumé</a>
         </Button>
