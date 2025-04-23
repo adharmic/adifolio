@@ -39,7 +39,7 @@
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#feaf3c, #db662d);
+    linear-gradient(to right, #feaf3c, #db662d);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
