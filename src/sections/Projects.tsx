@@ -13,8 +13,22 @@ export default function Projects() {
           source='https://github.com/adharmic/ferox'
           live='https://crates.io/crates/ferox'
           tags={['rust', 'graphics', 'cli', 'linalg']}>
+          <img className='h-64 rounded-lg' src='/ferox_3.png' />
           <img className='h-64 rounded-lg' src='/ferox_1.png' />
           <img className='h-64 rounded-lg' src='/ferox_2.png' />
+        </Project>
+        <div className='self-start w-1/2 md:w-full'>
+          <Separator />
+        </div>
+        <Project
+          name='Treeline'
+          description='A narrative horror game created in Blender and Godot. Made as part of a month-long solo-development game jam, with mostly hand-made assets.'
+          source='https://github.com/adharmic/treeline'
+          live='https://adharmic.itch.io/treeline'
+          tags={['godot', 'blender', 'game programming']}>
+          <img className='h-64 rounded-lg' src='/treeline_1.jpeg' />
+          <img className='h-64 rounded-lg' src='/treeline_2.jpeg' />
+          <img className='h-64 rounded-lg' src='/treeline_3.jpeg' />
         </Project>
         <div className='self-start w-1/2 md:w-full'>
           <Separator />

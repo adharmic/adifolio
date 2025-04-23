@@ -5,7 +5,7 @@ import Experience from './sections/Experience'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 
-export default function App () {
+export default function App() {
   return (
     <>
       <Navbar />

@@ -1,5 +1,7 @@
 import { PropsWithChildren } from 'react'
 import Button from './Button'
+import { AiOutlineLink } from 'react-icons/ai'
+import { AiOutlineCode } from 'react-icons/ai'
 
 interface ProjectProps {
   name: string
@@ -23,7 +25,7 @@ export default function Project({
       <div className='flex flex-row gap-2'>
         {tags.map((tag, index) => {
           return (
-            <div key={index} className='bg-[#ffffe3] text-[#000c1a] w-fit p-2 rounded-sm text-xs font-[500]'>
+            <div key={index} className='border-1 border-[#ffffe3] text-[#ffffe3] w-fit px-2 py-1 rounded-sm text-xs font-[500]'>
               {tag}
             </div>
           )
@@ -34,10 +36,10 @@ export default function Project({
       </div>
       <div className='w-full'>{description}</div>
       <div className='flex flex-row gap-2'>
-        <Button>
+        <Button icon={<AiOutlineLink />}>
           <a href={live}>Live Site</a>
         </Button>
-        <Button>
+        <Button icon={<AiOutlineCode />}>
           <a href={source}>Source Code</a>
         </Button>
       </div>

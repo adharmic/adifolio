@@ -1,3 +1,3 @@
-export default function Separator () {
-  return <div className='w-full border-t border-[#ffffe3]'></div>
+export default function Separator() {
+  return <div className='w-full border-t-2 border-[#ffffe3] rounded-full'></div>
 }

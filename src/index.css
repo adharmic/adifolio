@@ -39,11 +39,27 @@
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#ffffe3, #ffffe3);
+    linear-gradient(#feaf3c, #db662d);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.2s ease-in-out;
+}
+
+.gradient-header {
+  background: -webkit-linear-gradient(#feaf3c, #db662d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-button {
+  background: -webkit-linear-gradient(#feaf3c, #db662d);
+}
+
+.hover-gradient-button:hover {
+  background: -webkit-linear-gradient(#feaf3c, #db662d);
+  
 }
 
 .link-underline:hover {
@@ -58,7 +74,9 @@
 
 ::-webkit-scrollbar-thumb {
   background: #ffffe3;
+  border-radius: 1ex;
   -webkit-border-radius: 1ex;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
 }
 

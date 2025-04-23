@@ -1,4 +1,5 @@
 import Button from '../components/Button'
+import { AiOutlineDownload } from 'react-icons/ai'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <div className='w-fit md:w-full flex flex-row gap-2 justify-between'>
           <a
             href={'https://www.linkedin.com/in/adithya-ajith/'}
-            className='w-10 bg-[#ffffe3] flex items-center justify-center aspect-square rounded-full hover:scale-105 transition-all active:scale-75'
+            className='w-10 bg-[#feaf3c] flex items-center justify-center aspect-square rounded-full hover:scale-110 transition-all active:scale-75 hover:rotate-[6.28rad]'
           >
             <img
               src='/linkedin.svg'
@@ -20,7 +21,7 @@ export default function Home() {
           </a>
           <a
             href='https://www.instagram.com/a.dhar.mic/'
-            className='w-10 bg-[#ffffe3] flex items-center justify-center aspect-square rounded-full transition-all active:scale-75 hover:scale-105'
+            className='w-10 bg-[#feaf3c] flex items-center justify-center aspect-square rounded-full hover:scale-110 transition-all active:scale-75 hover:rotate-[6.28rad]'
           >
             <img
               src='/instagram.svg'
@@ -29,7 +30,7 @@ export default function Home() {
           </a>
           <a
             href='https://github.com/adharmic'
-            className='w-10 bg-[#ffffe3] flex items-center justify-center aspect-square rounded-full transition-all active:scale-75 hover:scale-105'
+            className='w-10 bg-[#feaf3c] flex items-center justify-center aspect-square rounded-full hover:scale-110 transition-all active:scale-75 hover:rotate-[6.28rad]'
           >
             <img
               src='/github.svg'
@@ -38,10 +39,10 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className='flex flex-col gap-4 w-full'>
-        <h1 className='text-3xl font-[400]'>Adithya Ajith</h1>
-        <p className='font-[300]'>Full Stack Software Engineer</p>
-        <Button>
+      <div className='flex flex-col gap-2 w-full'>
+        <h1 className='text-3xl font-[400] gradient-header'>Adithya Ajith</h1>
+        <p className='font-[300] text-xl gradient-header'>Full Stack Software Engineer</p>
+        <Button icon={<AiOutlineDownload />}>
           <a href='/adithya_ajith_resume.pdf'>Résumé</a>
         </Button>
         <p className=''>

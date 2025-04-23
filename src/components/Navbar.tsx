@@ -1,4 +1,4 @@
-export default function Navbar () {
+export default function Navbar() {
   return (
     <div className='z-10 bg-[#000c1a] fixed h-16 w-full p-4 text-2xl flex items-center justify-between'>
       <a className='link-underline' href='/'>

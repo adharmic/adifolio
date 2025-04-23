@@ -1,7 +1,8 @@
 import Button from '../components/Button'
 import Header from '../components/Header'
+import { AiOutlineSend } from 'react-icons/ai'
 
-export default function Contact () {
+export default function Contact() {
   return (
     <div id='contact' className='flex flex-col md:flex-row gap-4 md:gap-16'>
       <Header>Contact</Header>
@@ -18,7 +19,7 @@ export default function Contact () {
           <div className='text-xl'>Message</div>
           <textarea className='w-full rounded-lg border-1 p-2 border-[#ffffe3]'></textarea>
         </div>
-        <Button>Submit</Button>
+        <Button icon={<AiOutlineSend />}>Submit</Button>
       </div>
     </div>
   )
