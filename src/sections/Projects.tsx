@@ -1,12 +1,11 @@
 import Header from '../components/Header'
 import Project from '../components/Project'
-import Separator from '../components/Separator'
 
 export default function Projects() {
   return (
     <div id='projects' className='flex flex-col md:flex-row gap-4 md:gap-16'>
       <Header>Projects</Header>
-      <div className='flex flex-col gap-8 w-full'>
+      <div className='flex flex-col gap-4 w-full'>
         <Project
           name='ferox'
           description='An offline path-tracing image renderer coded entirely in Rust. Capable of reflections, refractions, shading, and other physically-based image rendering processes. Runs from the command line and can take custom scene configurations and environment maps.'
@@ -18,7 +17,6 @@ export default function Projects() {
           <img className='h-64 rounded-lg' src='/ferox_2.png' />
         </Project>
         <div className='self-start w-1/2 md:w-full'>
-          <Separator />
         </div>
         <Project
           name='Treeline'
@@ -31,7 +29,6 @@ export default function Projects() {
           <img className='h-64 rounded-lg' src='/treeline_3.jpeg' />
         </Project>
         <div className='self-start w-1/2 md:w-full'>
-          <Separator />
         </div>
         <Project
           name='adiOS'
@@ -43,7 +40,6 @@ export default function Projects() {
           <img className='h-64 rounded-lg' src='/adios.png' />
         </Project>
         <div className='self-start w-1/2 md:w-full'>
-          <Separator />
         </div>
         <Project
           tags={["typescript", "gamedev", "aseprite"]}

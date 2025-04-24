@@ -20,7 +20,7 @@ export default function Project({
   children
 }: PropsWithChildren<ProjectProps>) {
   return (
-    <div className='w-full flex flex-col gap-2'>
+    <div className='w-full flex flex-col gap-2 p-4 border-1 border-[#feaf3c] rounded-xl bg-[#000c1a] drop-shadow-md'>
       <div className='w-full text-2xl font-[300] gradient-header-alt'>{name}</div>
       <div className='flex flex-row gap-2'>
         {tags.map((tag, index) => {

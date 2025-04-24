@@ -1,6 +1,9 @@
 import Header from '../components/Header'
 import Separator from '../components/Separator'
 import Work from '../components/Work'
+import { TbBrandCSharp } from 'react-icons/tb'
+import { TbBrandReact } from 'react-icons/tb'
+import { TbBrandMongodb } from 'react-icons/tb'
 
 export default function Experience() {
   return (
@@ -13,10 +16,8 @@ export default function Experience() {
           company='KanTime'
           years='2023 - Present'
           description='Development of a healthcare PWA with EMR system serving providers, using React, .NET and Kafka for real-time medical reporting.'
+          skills={[<TbBrandReact />, <TbBrandCSharp />, <TbBrandMongodb />]}
         />
-        <div className='self-start w-1/2 md:w-full'>
-          <Separator />
-        </div>
         <Work
           logo='/comcast.svg'
           position='Software/Security Engineer'
@@ -24,9 +25,6 @@ export default function Experience() {
           years='2022 - 2023'
           description='Developed and maintained full-stack inventory management system with automated CI/CD pipelines and SSL certification processes, significantly improving deployment security.'
         />
-        <div className='self-start w-1/2 md:w-full'>
-          <Separator />
-        </div>
         <Work
           logo='/prohashing.png'
           position='Backend Engineer'

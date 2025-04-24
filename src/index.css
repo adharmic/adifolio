@@ -2,7 +2,7 @@
 
 :root {
   background-color: #000c1a;
-  color: #ffffe3;
+  color: #f1f3ce;
   font-family: 'Inter', serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -36,6 +36,7 @@
   padding: 0.25rem 0.5rem;
   color: #ffffe3;
 }
+
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
@@ -47,14 +48,14 @@
 }
 
 .gradient-header {
-  background: -webkit-linear-gradient(#feaf3c, #db662d);
+  background: linear-gradient(to right, #feaf3c, #db662d);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-header-alt {
-  background: linear-gradient(to right, #77dbf4, #008eab);
+  background: linear-gradient(to right, #77dbf4, #255a62);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

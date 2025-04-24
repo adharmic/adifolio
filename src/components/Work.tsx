@@ -1,9 +1,12 @@
+import { ReactNode } from "react"
+
 interface WorkProps {
   company: string
   position: string
   years: string
   description: string
   logo: string
+  skills?: Array<ReactNode>
 }
 
 export default function Work({
@@ -11,16 +14,26 @@ export default function Work({
   company,
   position,
   years,
-  description
+  description,
+  skills
 }: WorkProps) {
   return (
-    <div className='w-full flex flex-col gap-2'>
-      <div className='w-full text-2xl font-[300] gradient-header-alt'>{company}</div>
-      <div className="p-2 rounded-full bg-[#ffffe3] w-20 aspect-square">
-        <img src={logo} className="w-20 aspect-square object-contain bg-[#ffffe3]" />
+    <div className='w-full flex flex-col gap-2 drop-shadow-lg p-4 bg-[#000c1a] rounded-lg border-1 border-[#feaf3c]'>
+      <div className='w-full text-2xl font-[400] gradient-header-alt'>{company}</div>
+      <div className="w-full flex row items-center gap-4">
+        <div className="p-2 rounded-full bg-[#ffffe3] w-20 aspect-square">
+          <img src={logo} className="w-20 aspect-square object-contain bg-[#ffffe3]" />
+        </div>
+        {
+          skills?.map((skill, index) =>
+            <div key={index} className="p-2 rounded-full bg-[#ffffe3] w-12 aspect-square flex text-[#000c1a] items-center justify-center text-3xl">
+              {skill}
+            </div>
+          )
+        }
       </div>
-      <div className='w-full text-xl font-[200]'>{position}</div>
-      <div className='w-full text-lg'>{years}</div>
+      <div className='w-full text-xl font-[300]'>{position}</div>
+      <div className='w-full text-sm'>{years}</div>
       <div className='w-full'>{description}</div>
     </div>
   )
