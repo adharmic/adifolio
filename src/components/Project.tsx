@@ -22,10 +22,10 @@ export default function Project({
   return (
     <div className='w-full flex flex-col gap-2 p-4 border-1 border-[#feaf3c] rounded-xl bg-[#000c1a] drop-shadow-md'>
       <div className='w-full text-2xl font-[300] gradient-header-alt'>{name}</div>
-      <div className='flex flex-row gap-2'>
+      <div className='flex flex-row gap-2 overflow-x-scroll'>
         {tags.map((tag, index) => {
           return (
-            <div key={index} className='border-1 border-[#ffffe3] text-[#ffffe3] w-fit px-2 py-1 rounded-sm text-xs font-[500]'>
+            <div key={index} className='border-1 border-[#ffffe3] text-[#ffffe3] w-fit px-2 py-1 rounded-sm text-xs font-[500] flex items-center justify-center'>
               {tag}
             </div>
           )

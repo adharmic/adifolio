@@ -1,9 +1,15 @@
 import Header from '../components/Header'
-import Separator from '../components/Separator'
 import Work from '../components/Work'
 import { TbBrandCSharp } from 'react-icons/tb'
 import { TbBrandReact } from 'react-icons/tb'
 import { TbBrandMongodb } from 'react-icons/tb'
+import { TbBrandMysql } from 'react-icons/tb'
+import { TbBrandDocker } from 'react-icons/tb'
+import { AiOutlineJava } from 'react-icons/ai'
+import { SiJenkins } from 'react-icons/si'
+import { SiDotnet } from 'react-icons/si'
+import { TbBrandPython } from 'react-icons/tb'
+import { BiLogoSpringBoot } from 'react-icons/bi'
 
 export default function Experience() {
   return (
@@ -16,7 +22,7 @@ export default function Experience() {
           company='KanTime'
           years='2023 - Present'
           description='Development of a healthcare PWA with EMR system serving providers, using React, .NET and Kafka for real-time medical reporting.'
-          skills={[<TbBrandReact />, <TbBrandCSharp />, <TbBrandMongodb />]}
+          skills={[<TbBrandReact />, <TbBrandCSharp />, <SiDotnet />, <TbBrandMongodb />, <TbBrandMysql />, <TbBrandDocker />]}
         />
         <Work
           logo='/comcast.svg'
@@ -24,6 +30,7 @@ export default function Experience() {
           company='Comcast'
           years='2022 - 2023'
           description='Developed and maintained full-stack inventory management system with automated CI/CD pipelines and SSL certification processes, significantly improving deployment security.'
+          skills={[<TbBrandReact />, <AiOutlineJava />, <SiJenkins />, <BiLogoSpringBoot />]}
         />
         <Work
           logo='/prohashing.png'
@@ -31,6 +38,7 @@ export default function Experience() {
           company='PROHASHING'
           years='2021 - 2022'
           description='Built distributed transaction processing systems and APIs, implementing monitoring solutions that substantially reduced system outages.'
+          skills={[<TbBrandPython />]}
         />
       </div>
     </div>

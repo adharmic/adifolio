@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import Separator from './components/Separator'
 import Home from './sections/Home'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
