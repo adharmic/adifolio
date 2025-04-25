@@ -4,7 +4,7 @@ import { AiOutlineDownload } from 'react-icons/ai'
 export default function Home() {
   return (
     <div className='flex flex-col md:flex-row  gap-4 md:gap-16'>
-      <div className='w-fit md:w-[200px] flex flex-col gap-2 justify-center md:justify-between border-0 md:border-1 border-[#feaf3c] p-4 rounded-lg'>
+      <div className='w-fit md:w-[200px] flex flex-col gap-2 justify-center md:justify-between border-0 md:border-1 border-[#feaf3c] md:p-4 rounded-lg'>
         <img
           className='md:w-full w-32 aspect-square rounded-full border-4 border-[#ffffe3]'
           src='/headshot.jpg'
