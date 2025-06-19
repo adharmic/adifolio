@@ -17,10 +17,18 @@ export default function Experience() {
       <Header>Experience</Header>
       <div className='flex flex-col gap-8 w-full'>
         <Work
+          logo='/jpmc.png'
+          position='Software Engineer'
+          company='J.P. Morgan & Chase'
+          years='2025 - Present'
+          description='Full-stack development of financial reporting and regulatory systems.'
+          skills={[<TbBrandReact />, <TbBrandCSharp />, <SiDotnet />, ]}
+        />
+        <Work
           logo='/kantime.svg'
           position='Software Engineer'
           company='KanTime'
-          years='2023 - Present'
+          years='2023 - 2025'
           description='Development of a healthcare PWA with EMR system serving providers, using React, .NET and Kafka for real-time medical reporting.'
           skills={[<TbBrandReact />, <TbBrandCSharp />, <SiDotnet />, <TbBrandMongodb />, <TbBrandMysql />, <TbBrandDocker />]}
         />
