@@ -1,25 +1,34 @@
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Home from './sections/Home'
-import Experience from './sections/Experience'
-import Projects from './sections/Projects'
+import Ruler from './components/Ruler'
+import Starfield from './components/Starfield'
 import Contact from './sections/Contact'
-import FullSeparator from './components/FullSeparator'
+import Experience from './sections/Experience'
+import Home from './sections/Home'
+import Projects from './sections/Projects'
 
 export default function App() {
   return (
     <>
+      <a
+        href='#main'
+        className='sr-only bg-amber px-3 py-2 text-void focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60]'
+      >
+        Skip to content
+      </a>
+      <Starfield />
+      <div aria-hidden className='crt' />
       <Navbar />
-      <div className='gradient w-screen h-min-screen flex items-center font-[200] flex-col'>
-        <div className='max-w-[1400px] w-11/12 md:w-3/4 flex flex-col gap-8 py-16'>
-          <Home />
-          <FullSeparator />
-          <Experience />
-          <FullSeparator />
-          <Projects />
-          <FullSeparator />
-          <Contact />
-        </div>
-      </div>
+      <main id='main' className='relative z-10 mx-auto flex w-11/12 max-w-[1400px] flex-col gap-10 pt-28 pb-16 md:w-3/4'>
+        <Home />
+        <Ruler label='// 01 → 02' />
+        <Experience />
+        <Ruler label='// 02 → 03' />
+        <Projects />
+        <Ruler label='// 03 → 04' />
+        <Contact />
+      </main>
+      <Footer />
     </>
   )
 }

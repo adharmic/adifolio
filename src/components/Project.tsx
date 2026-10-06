@@ -1,48 +1,50 @@
-import { PropsWithChildren } from 'react'
+import { AiOutlineCode, AiOutlineLink } from 'react-icons/ai'
+import { ProjectEntry } from '../data'
 import Button from './Button'
-import { AiOutlineLink } from 'react-icons/ai'
-import { AiOutlineCode } from 'react-icons/ai'
+import Panel from './Panel'
+import YouTubeEmbed from './YouTubeEmbed'
 
-interface ProjectProps {
-  name: string
-  source: string
-  live: string
-  description: string
-  tags: Array<string>
-}
-
-export default function Project({
-  name,
-  description,
-  source,
-  live,
-  tags,
-  children
-}: PropsWithChildren<ProjectProps>) {
+export default function Project({ project }: { project: ProjectEntry }) {
+  const { id, name, description, source, live, liveLabel, tags, media } = project
   return (
-    <div className='w-full flex flex-col gap-2 p-4 border-1 border-[#feaf3c] rounded-xl bg-[#000c1a] drop-shadow-md'>
-      <div className='w-full text-2xl font-[300] gradient-header-alt'>{name}</div>
-      <div className='flex flex-row gap-2 overflow-x-scroll'>
-        {tags.map((tag, index) => {
-          return (
-            <div key={index} className='border-1 border-[#ffffe3] text-[#ffffe3] w-fit px-2 py-1 rounded-sm text-xs font-[500] flex items-center justify-center'>
-              {tag}
-            </div>
-          )
-        })}
+    <Panel as='article' title={`~/projects/${id}`} meta={`${media.length} file${media.length === 1 ? '' : 's'}`}>
+      <h3 className='gradient-header-alt font-display text-2xl font-bold'>{name}</h3>
+      <ul aria-label='Tags' className='mt-2 flex flex-wrap gap-2 text-xs'>
+        {tags.map((tag) => (
+          <li key={tag} className='border border-cream/30 px-2 py-0.5 text-cream/80'>
+            #{tag}
+          </li>
+        ))}
+      </ul>
+      <div
+        role='group'
+        aria-label={`${name} media`}
+        tabIndex={0}
+        className='mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2'
+      >
+        {media.map((item) =>
+          item.kind === 'image' ? (
+            <img
+              key={item.src}
+              src={item.src}
+              alt={item.alt}
+              loading='lazy'
+              className='h-48 w-auto shrink-0 snap-start border border-cream/15 md:h-64'
+            />
+          ) : (
+            <YouTubeEmbed key={item.id} id={item.id} title={item.title} />
+          ),
+        )}
       </div>
-      <div className='w-full overflow-x-auto flex gap-4 rounded-lg '>
-        {children}
-      </div>
-      <div className='w-full'>{description}</div>
-      <div className='flex flex-row gap-2'>
-        <Button icon={<AiOutlineLink />}>
-          <a href={live}>Live Site</a>
+      <p className='mt-4 leading-relaxed'>{description}</p>
+      <div className='mt-4 flex flex-wrap gap-3'>
+        <Button href={live} icon={<AiOutlineLink />}>
+          {liveLabel ?? 'Live site'}
         </Button>
-        <Button icon={<AiOutlineCode />}>
-          <a href={source}>Source Code</a>
+        <Button href={source} variant='outline' icon={<AiOutlineCode />}>
+          Source
         </Button>
       </div>
-    </div>
+    </Panel>
   )
 }
