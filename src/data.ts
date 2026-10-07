@@ -109,7 +109,7 @@ export interface ProjectEntry {
   id: string
   name: string
   description: string
-  source: string
+  source?: string
   live: string
   liveLabel?: string
   tags: Array<string>
@@ -117,6 +117,20 @@ export interface ProjectEntry {
 }
 
 export const projects: Array<ProjectEntry> = [
+  {
+    id: 'satyaloka',
+    name: 'Satyaloka',
+    description:
+      'My personal blog and art journal, styled as a retro sci-fi broadsheet. Hosts articles on game and web development alongside nature illustrations and weekly art recaps, all authored in MDX with build-time thumbnail generation and an RSS feed.',
+    live: 'https://satyaloka.org',
+    liveLabel: 'satyaloka.org',
+    tags: ['nextjs', 'typescript', 'mdx', 'tailwind'],
+    media: [
+      { kind: 'image', src: '/satyaloka_1.webp', alt: 'Satyaloka front page styled as a broadsheet, with a blackletter masthead, news wire ticker and featured nature illustrations' },
+      { kind: 'image', src: '/satyaloka_2.webp', alt: 'Satyaloka tags index listing articles alphabetically under headings like Art, Godot and Process' },
+      { kind: 'image', src: '/satyaloka_3.webp', alt: 'Satyaloka article on mobile with a table of contents overlay and an ink study of a cat' },
+    ],
+  },
   {
     id: 'ferox',
     name: 'ferox',

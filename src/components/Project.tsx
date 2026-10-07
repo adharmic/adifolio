@@ -16,34 +16,38 @@ export default function Project({ project }: { project: ProjectEntry }) {
           </li>
         ))}
       </ul>
-      <div
-        role='group'
-        aria-label={`${name} media`}
-        tabIndex={0}
-        className='mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2'
-      >
-        {media.map((item) =>
-          item.kind === 'image' ? (
-            <img
-              key={item.src}
-              src={item.src}
-              alt={item.alt}
-              loading='lazy'
-              className='h-48 w-auto shrink-0 snap-start border border-cream/15 md:h-64'
-            />
-          ) : (
-            <YouTubeEmbed key={item.id} id={item.id} title={item.title} />
-          ),
-        )}
-      </div>
+      {media.length > 0 && (
+        <div
+          role='group'
+          aria-label={`${name} media`}
+          tabIndex={0}
+          className='mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2'
+        >
+          {media.map((item) =>
+            item.kind === 'image' ? (
+              <img
+                key={item.src}
+                src={item.src}
+                alt={item.alt}
+                loading='lazy'
+                className='h-48 w-auto shrink-0 snap-start border border-cream/15 md:h-64'
+              />
+            ) : (
+              <YouTubeEmbed key={item.id} id={item.id} title={item.title} />
+            ),
+          )}
+        </div>
+      )}
       <p className='mt-4 leading-relaxed'>{description}</p>
       <div className='mt-4 flex flex-wrap gap-3'>
         <Button href={live} icon={<AiOutlineLink />}>
           {liveLabel ?? 'Live site'}
         </Button>
-        <Button href={source} variant='outline' icon={<AiOutlineCode />}>
-          Source
-        </Button>
+        {source && (
+          <Button href={source} variant='outline' icon={<AiOutlineCode />}>
+            Source
+          </Button>
+        )}
       </div>
     </Panel>
   )
