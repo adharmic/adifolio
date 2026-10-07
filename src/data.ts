@@ -1,14 +1,16 @@
 import { IconType } from 'react-icons'
 import { AiOutlineJava } from 'react-icons/ai'
 import { BiLogoSpringBoot } from 'react-icons/bi'
-import { SiDotnet, SiJenkins } from 'react-icons/si'
+import { SiDotnet, SiJenkins, SiOracle } from 'react-icons/si'
 import {
+  TbBrandAws,
   TbBrandCSharp,
   TbBrandDocker,
   TbBrandMongodb,
   TbBrandMysql,
   TbBrandPython,
   TbBrandReact,
+  TbDatabaseExport,
 } from 'react-icons/tb'
 
 export interface Skill {
@@ -27,6 +29,9 @@ const skills = {
   jenkins: { name: 'Jenkins', icon: SiJenkins },
   spring: { name: 'Spring Boot', icon: BiLogoSpringBoot },
   python: { name: 'Python', icon: TbBrandPython },
+  oracle: { name: 'Oracle SQL', icon: SiOracle },
+  aws: { name: 'AWS', icon: TbBrandAws },
+  pentaho: { name: 'Pentaho', icon: TbDatabaseExport },
 } satisfies Record<string, Skill>
 
 export const profile = {
@@ -62,7 +67,7 @@ export const jobs: Array<Job> = [
     years: '2025 – Present',
     description: 'Full-stack development of financial reporting and regulatory systems.',
     logo: '/jpmc.png',
-    skills: [skills.react, skills.csharp, skills.dotnet],
+    skills: [skills.react, skills.csharp, skills.dotnet, skills.oracle, skills.aws, skills.pentaho],
   },
   {
     id: 'kantime',

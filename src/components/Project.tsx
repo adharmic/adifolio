@@ -12,7 +12,7 @@ export default function Project({ project }: { project: ProjectEntry }) {
       <ul aria-label='Tags' className='mt-2 flex flex-wrap gap-2 text-xs'>
         {tags.map((tag) => (
           <li key={tag} className='border border-cream/30 px-2 py-0.5 text-cream/80'>
-            #{tag}
+            {tag}
           </li>
         ))}
       </ul>

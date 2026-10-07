@@ -11,7 +11,7 @@ function Field({ id, label, children }: PropsWithChildren<{ id: string; label: s
       <label htmlFor={id} className='text-[11px] uppercase tracking-[0.25em] text-cyan'>
         {label}
       </label>
-      <div className='flex items-start gap-2 border border-cream/25 bg-void/60 px-3 py-2 transition-colors focus-within:border-amber'>
+      <div className='flex items-start gap-2 border border-cream/25 bg-void/60 px-3 py-2 transition-[border-color,box-shadow] focus-within:border-amber focus-within:shadow-[0_0_14px_rgb(254_175_60/0.35)]'>
         <span aria-hidden className='text-amber'>&gt;</span>
         {children}
       </div>
