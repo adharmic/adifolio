@@ -26,8 +26,14 @@ export default function Button({ icon, variant = 'solid', children, className = 
   )
 
   if (rest.href !== undefined) {
+    // Off-site links open in a new tab; in-page anchors and downloads stay put
+    const external = /^https?:\/\//.test(rest.href)
     return (
-      <a className={classes} {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <a
+        className={classes}
+        {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+        {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
         {content}
       </a>
     )

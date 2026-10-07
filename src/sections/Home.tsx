@@ -41,6 +41,8 @@ export default function Home() {
             <li key={social.name}>
               <a
                 href={social.href}
+                target='_blank'
+                rel='noopener noreferrer'
                 aria-label={social.name}
                 className='flex size-10 items-center justify-center rounded-full bg-amber transition-all hover:scale-110 hover:rotate-[360deg] active:scale-90'
               >

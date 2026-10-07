@@ -12,14 +12,15 @@ export default function App() {
     <>
       <a
         href='#main'
-        className='sr-only bg-amber px-3 py-2 text-void focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60]'
+        className='sr-only bg-amber px-3 py-2 text-void focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[65]'
       >
         Skip to content
       </a>
       <Starfield />
-      <div aria-hidden className='crt' />
+      <div aria-hidden className='crt-scanlines scanlines' />
+      <div aria-hidden className='crt-vignette' />
       <Navbar />
-      <main id='main' className='relative z-10 mx-auto flex w-11/12 max-w-[1400px] flex-col gap-10 pt-28 pb-16 md:w-3/4'>
+      <main id='main' className='relative mx-auto flex w-11/12 max-w-[1400px] flex-col gap-10 pt-28 pb-16 md:w-3/4'>
         <Home />
         <Ruler label='// 01 → 02' />
         <Experience />

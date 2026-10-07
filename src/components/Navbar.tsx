@@ -46,7 +46,9 @@ export default function Navbar() {
   )
 
   return (
-    <header className='fixed inset-x-0 top-0 z-40 border-b border-amber/20 bg-void/85 backdrop-blur-md'>
+    <header className='fixed inset-x-0 top-0 z-[55] border-b border-amber/20 bg-void/85 backdrop-blur-md'>
+      {/* Sits above the global scanlines (so project images can scroll under it), so it draws its own */}
+      <div aria-hidden className='scanlines pointer-events-none absolute inset-0' />
       <nav aria-label='Primary' className='mx-auto flex h-16 max-w-[1400px] items-center justify-between px-4 md:px-8'>
         <a href='#home' className='font-display text-base md:text-xl' aria-label='Adithya Ajith, back to top'>
           <span className='gradient-header'>adithyajith</span>

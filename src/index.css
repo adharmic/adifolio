@@ -109,7 +109,6 @@ body {
       0 0 0 1px rgb(0 12 26 / 0.6),
       0 10px 40px -12px rgb(0 0 0 / 0.8),
       inset 0 0 40px rgb(119 219 244 / 0.03);
-    backdrop-filter: blur(2px);
   }
   .panel::before,
   .panel::after {
@@ -151,14 +150,23 @@ body {
 
 /* ---------- CRT overlay ---------- */
 
-.crt {
+/* Scanlines sit at z-50, under the navbar and project images (which opt out of
+   the effect). The vignette sits above everything except the lightbox. */
+.scanlines {
+  background: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.1) 0 1px, transparent 1px 3px);
+}
+.crt-scanlines,
+.crt-vignette {
   pointer-events: none;
   position: fixed;
   inset: 0;
+}
+.crt-scanlines {
   z-index: 50;
-  background:
-    repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.1) 0 1px, transparent 1px 3px),
-    radial-gradient(ellipse at center, transparent 60%, rgb(0 0 0 / 0.45) 100%);
+}
+.crt-vignette {
+  z-index: 60;
+  background: radial-gradient(ellipse at center, transparent 60%, rgb(0 0 0 / 0.45) 100%);
 }
 
 /* ---------- scrollbars ---------- */
